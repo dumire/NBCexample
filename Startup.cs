@@ -20,7 +20,7 @@ namespace NBCexample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ProductContext>(options => 
+            services.AddDbContext<ProductContext>(options =>
                 options.UseSqlite("DataSource=./Data.db")
             );
             services.AddControllers();

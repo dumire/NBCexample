@@ -3,13 +3,14 @@ using System;
 
 namespace NBCExample.Models
 {
-    public class ProductPriceHistory {
+    public class ProductPriceHistory
+    {
         public long Id { get; set; }
         public string Name { get; set; }
         public DateTime Created { get; set; }
         public List<PriceChange> PriceChanges { get; set; }
 
-        public ProductPriceHistory(Product product,List<PriceHistory> priceHistories)
+        public ProductPriceHistory(Product product, List<PriceHistory> priceHistories)
         {
             Id = product.Id;
             Name = product.Name;
@@ -35,5 +36,5 @@ namespace NBCExample.Models
             NewPrice = history.NewPrice;
         }
     }
-    
+
 }
